@@ -6,7 +6,7 @@ import * as firebase from 'firebase'
 
 //stacks
 import { HomeNavigation } from './HomeStack'
-import { AuthNavigation } from './AuthRegister'
+import { AuthNavigation } from './AuthStack'
 
 
 const Drawer = createDrawerNavigator();
@@ -27,7 +27,7 @@ export default function Navigation() {
 
     return (
         Loading
-            ? <ActivityIndicator size="large" color="000" />
+            ? <ActivityIndicator size="large" color="#000" />
             : <NavigationContainer>
                 {isAuth
                     ? <Drawer.Navigator initialRouteName="Home">
